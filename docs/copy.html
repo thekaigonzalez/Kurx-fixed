@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1200">
+    <title>Manual Page Website</title>
+    <style>
+        body {
+            background-color: rgb(197, 197, 197);
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: medium;
+            /* white-space: pre-wrap; */
+        }
+
+        .document {
+            background-color: rgb(230, 230, 230);
+            padding: 3em;
+            width: 70%;
+            margin: 0 auto;
+            box-shadow: 1px 1px 10px rgb(127, 127, 127, 0.1);
+            border-color: rgb(177, 177, 177);
+            border-width: 1px;
+            border-style: solid;
+            border-radius: 10px;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5 {
+            font-weight: 700;
+            font-size: x-large;
+            color: rgb(93, 0, 0);
+            text-transform: uppercase;
+        }
+
+        .subheader {
+            text-transform: uppercase;
+            color: rgb(50, 0, 0);
+        }
+
+        pre {
+            font-size: 17px;
+            font-family: monospace;
+        }
+
+        b,
+        .highlight {
+            color: rgb(106, 37, 0)
+        }
+
+        .parameter {
+            color: rgb(1, 1, 126)
+        }
+
+        i {
+            color: green;
+        }
+
+        a {
+            text-decoration: none;
+            color: rgb(78, 78, 255);
+            transition: all 1s ease-in-out;
+        }
+
+        a:hover {
+            color: rgb(255, 29, 29);
+            background-color: #ff212133;
+            text-decoration: underline;
+        }
+
+        img {
+            float: right;
+            width: 20%;
+            border-style: solid;
+            transition: all 1s ease-in-out;
+        }
+
+        img:hover {
+            transform: scale(1.05);
+        }
+
+        .author {
+            color: rgb(180, 180, 180);
+            text-transform: lowercase;
+            font-style: italic;
+            margin-left: 10%;
+        }
+
+        ._title {
+            font-style: normal;
+            color: green;
+            font-weight: normal;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        pre {
+            white-space: pre-wrap;
+            /* Since CSS 2.1 */
+            white-space: -moz-pre-wrap;
+            /* Mozilla, since 1999 */
+            white-space: -pre-wrap;
+            /* Opera 4-6 */
+            white-space: -o-pre-wrap;
+            /* Opera 7 */
+            word-wrap: break-word;
+            /* Internet Explorer 5.5+ */
+        }
+    </style>
+
+    <script>
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0; // For Safari
+            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        }
+    </script>
+</head>
+
+<body>
+    <div class="document">
+        <h1 class="_title">copy(2) - copy file contents to another</h1>
+
+        <pre class="author">Author: Kai D. Gonzalez (gkai70264@gmail.com)</pre>
+
+        <hr>
+
+        <h1>synopsis</h1>
+
+        <pre>
+            <b>int copy (const char *_origin, const char *_dest)</b></pre>
+        <h1>description</h1>
+        <pre>
+            this function copies _origin's contents to _dest, creating a new
+            file in the process (or writing over an existing one.) copy does not
+            dirty any buffer - it will allocate the space needed to store and
+            copy the data from _origin to _dest.
+        <b class="subheader">return values &amp; debugging</b>
+            this function does not error, however, it will give a notification
+            when a file that you are trying to copy does not exist, this is to
+            prevent segfaults within your programs and lua scripts.
+
+            you do not have to worry about getting a fault with this function,
+            and all memory is handled inside of it.
+        </pre>
+    </div>
+</body>
+
+</html>
